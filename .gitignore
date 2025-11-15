@@ -1,0 +1,98 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pdb
+*.log
+
+# ----------------------------
+# Virtual Environment
+# ----------------------------
+venv/
+env/
+.venv/
+env.bak/
+
+# ----------------------------
+# FastAPI / Uvicorn / Temp files
+# ----------------------------
+*.sqlite3
+*.db
+*.log
+*.pid
+
+# ----------------------------
+# IDE / Editors
+# ----------------------------
+
+# VSCode
+.vscode/
+.code/
+
+# PyCharm
+.idea/
+*.iml
+
+# ----------------------------
+# OS Generated Files
+# ----------------------------
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# MacOS (if repo used on different OS)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ----------------------------
+# Env files (Secrets)
+# ----------------------------
+.env
+.env.*
+*.env
+!env.example
+
+# ----------------------------
+# Build / Distribution
+# ----------------------------
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# ----------------------------
+# Cache
+# ----------------------------
+.cache/
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
+logs/
+debug.log
+
+# ----------------------------
+# Coverage
+# ----------------------------
+.coverage
+.coverage.*
+coverage/
+
+# ----------------------------
+# MyPy and Pyright
+# ----------------------------
+.dmypy.json
+dmypy.json
+pyrightconfig.json
+.env
