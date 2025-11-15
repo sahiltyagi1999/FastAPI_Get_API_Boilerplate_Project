@@ -18,3 +18,11 @@ pip install -r requirements.txt
 or
 pip install fastapi uvicorn[standard] motor pydantic pydantic-settings email-validator
 python -m uvicorn app.main:app --reload
+
+```
+## Key Learnings-
+
+1- Here in Model Unlike Node Project we dont store schema, there is no concept of writing schema in FastAPI, here we store I/O response Structure Only 
+2- Inside db/user.py here we have main DB call functions liek we used to have in Node JS, here we also map reponse in format we want by serealising it
+3- Inside API folder we only have routers just like we had routes in Node JS
+4- Service folder is basically used if you want to add any logic after getting DB response
