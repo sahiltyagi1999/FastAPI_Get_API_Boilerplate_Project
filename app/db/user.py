@@ -1,5 +1,6 @@
 from app.db.mongodb import db
 from bson import ObjectId
+from datetime import datetime
 
 usersModel = db["ed_users"]
 
@@ -23,3 +24,12 @@ async def get_all_users_repo():
     async for user in cursor:
         users.append(serialize_user(user))
     return users
+
+async def create_user_repo(data: dict):
+    data["created_at"] = datetime.utcnow()
+    data["updated_at"] = datetime.utcnow()
+
+    result = await usersModel.insert_one(data) # as we have mongoose in node js which gave .find .findand update etc here "motor" gives
+ #here motor works as ODM 
+    new_user = await usersModel.find_one({"_id": result.inserted_id})
+    return new_user

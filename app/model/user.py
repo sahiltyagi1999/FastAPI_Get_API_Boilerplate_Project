@@ -16,3 +16,12 @@ class UserResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class CreateUserRequest(BaseModel):
+    name: str
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    gender: Optional[str] = None
+    role: int = 1
+    image: Optional[str] = None
