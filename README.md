@@ -1,36 +1,20 @@
-🚀 FastAPI + MongoDB
+# 🚀 FastAPI + MongoDB Starter (Windows Guide)
 
-A simple FastAPI backend with MongoDB, running inside a Python virtual environment.
+A simple FastAPI backend with MongoDB using Motor, Pydantic v2, and a clean modular structure.
 
-▶️ How to Start This App (Windows)
-1️⃣ Create & Activate Virtual Environment
+---
+
+## 📦 Requirements
+- Windows 10 / 11
+- Python 3.9+
+- MongoDB Local or MongoDB Atlas
+
+---
+
+```sh
 python -m venv venv
 venv\Scripts\activate
-
-2️⃣ Install Dependencies
 pip install -r requirements.txt
-
-
-Or install manually:
-
+or
 pip install fastapi uvicorn[standard] motor pydantic pydantic-settings email-validator
-
-3️⃣ Create .env in project root
-MONGO_URL=your-mongo-url-here
-DB_NAME=your-db-name
-
-4️⃣ Run the Server
 python -m uvicorn app.main:app --reload
-
-
-Server runs at:
-
-http://127.0.0.1:8000
-
-
-API Docs:
-
-http://127.0.0.1:8000/docs
-
-🛑 Stop the Server
-CTRL + C
