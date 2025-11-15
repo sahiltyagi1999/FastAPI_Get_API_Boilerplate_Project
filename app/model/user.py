@@ -4,12 +4,12 @@ from typing import Optional
 #respose for getAllUsers - It says which field we need to send to client
 #then 
 class UserResponse(BaseModel):
-    id: str
-    name: str
+    name: Optional[str] = None #made optional
+    email: Optional[str] = None
     gender: Optional[str]
-    email: Optional[EmailStr]
+    email: Optional[str]
     phone: Optional[str]
-    role: int
+    role: Optional[int]
     image: Optional[str]
     deleted_at: Optional[str]
     expireAt: Optional[str]
